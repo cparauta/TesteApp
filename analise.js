@@ -5,6 +5,12 @@ let notes = [Gs+O, C+O, Ds+O, G+O, As+O, Cs+O, Fs+O];//1;3;5;7;2;4;6//
 //var pieColors = [[cor1], [cor2]] ;//Cores estão de preto para cinza [0, 30, 60, 90, 120, 150, 180]
 var cor1 =[]
 var cor2 = []
+var cor3 = []
+var cor4 = []
+var cor5 = []
+var cor6 = []
+var cor7 = []
+
 var song;
 var button;
 //let playing = false;
