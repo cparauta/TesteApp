@@ -1,0 +1,20 @@
+body {
+  background: rgba(0, 195, 255, 0.363);
+}
+canvas {
+  display: block;
+}
+
+h1 {
+  color: rgba(8, 18, 22, 0.849);
+}
+li {
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(0, 26, 255, 0.781)
+}
+.asd {
+  width: 300px;
+  margin: 1px auto;
+  display: block;
+}
