@@ -10,7 +10,6 @@ var cor4 = []
 var cor5 = []
 var cor6 = []
 var cor7 = []
-
 var song;
 var button;
 //let playing = false;
@@ -53,15 +52,15 @@ function setup() {
     //print(table.getString(r,c)*255);
     //pieColors = table.getString(r,c)*255
     cor1.push(table.getString(0,c)*255)
-    //print(cor1)
     cor2.push(table.getString(1,c)*255)
-    //print(cor2)
-    //print(pieColors[0])
+    cor3.push(table.getString(2,c)*255)
+    cor4.push(table.getString(3,c)*255)
+    cor5.push(table.getString(4,c)*255)
+    cor6.push(table.getString(5,c)*255)
+    cor7.push(table.getString(6,c)*255)
+
   }
   
-
-
-
   //extrair valores 
   //let row = table.getRow(0);
   //print it column by column
@@ -97,7 +96,7 @@ function tooglePlaying() {
 function pieChart(diameter) {
   let lastAngle = HALF_PI;
   for (let i = 0; i < 7; i++) {
-    fill(cor1[i]);
+    fill(cor7[i]);
     arc(width / 2, height / 2, diameter, diameter, lastAngle, lastAngle + TWO_PI / 7);
     lastAngle += TWO_PI / 7;
   }
