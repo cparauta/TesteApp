@@ -10,6 +10,12 @@ var cor4 = []
 var cor5 = []
 var cor6 = []
 var cor7 = []
+var cor8 = []
+var cor9 = []
+var cor10 = []
+var cor11 = []
+var cor12 = []
+var cor13 = []
 var song;
 var button;
 //let playing = false;
@@ -58,6 +64,12 @@ function setup() {
     cor5.push(table.getString(4,c)*255)
     cor6.push(table.getString(5,c)*255)
     cor7.push(table.getString(6,c)*255)
+    cor8.push(table.getString(7,c)*255)
+    cor9.push(table.getString(8,c)*255)
+    cor10.push(table.getString(9,c)*255)
+    cor11.push(table.getString(10,c)*255)
+    cor12.push(table.getString(11,c)*255)
+    cor13.push(table.getString(12,c)*255)
 
   }
   
