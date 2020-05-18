@@ -1,20 +1,136 @@
-body {
-  background: rgba(0, 195, 255, 0.363);
-}
-canvas {
-  display: block;
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Open Sans",sans-serif;
 }
 
-h1 {
-  color: rgba(8, 18, 22, 0.849);
+header{
+  height: 90px;
+  background: #3f5066;
 }
-li {
-  font-size: large;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(0, 26, 255, 0.781)
+
+.inner-width{
+  max-width: 10000px;
+  padding: 0 10px;
+  margin: auto;
 }
-.asd {
-  width: 300px;
-  margin: 1px auto;
+
+.logo{
+  float: left;
+  padding: 20px 0;
+}
+
+.logo img{
+  height: 50px;
+}
+
+.navigation-menu{
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+
+.navigation-menu a{
+  margin-left: 10px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+
+.navigation-menu a:hover{
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
+}
+
+.navigation-menu i{
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.home{
+  color: #ff6b6b;
+}
+
+.about{
+  color: #0abde3;
+}
+
+.works{
+  color: #feca57;
+}
+
+
+.contact{
+  color: #1dd1a1;
+}
+
+/*.audios {
+  font-family: "Open Sans",sans-serif;
+  list-style: none;
   display: block;
+  min-height: 290px;
+  padding: 100;
+  position: absolute;
+  background-color: #172b4d ;
+}*/
+
+.menu-toggle-btn{
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: #fff;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+
+.audio{
+  position: absolute;
+  left: 10px;
+  top: 100px;
+}
+
+
+@media screen and (max-width:800px) {
+  .menu-toggle-btn{
+    display: block !important;
+  }
+
+  .navigation-menu{
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .navigation-menu::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .navigation-menu a{
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navigation-menu.active{
+    display: block;
+  }
+
 }
