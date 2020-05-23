@@ -1,4 +1,4 @@
-var selectedPreset = _tone_0250_Acoustic_Guitar_sf2_file;
+var selectedPreset = _tone_0000_SBLive_sf2;
 var AudioContextFunc = window.AudioContext || window.webkitAudioContext;
 var audioContext = new AudioContextFunc();
 //var output = audioContext.destination;
@@ -13,11 +13,11 @@ var C = 0, Cs = 1, D = 2, Ds = 3, E = 4, F = 5, Fs = 6, G = 7, Gs = 8, A = 9, As
 var O = 12;
 var _6th = E + O * 3, _5th = A + O * 3, _4th = D + O * 4, _3rd = G + O * 4, _2nd = B + O * 4, _1st = E + O * 5;
 
-var fretsAm = [-1, 0, 2, 2, 1, 0];
+var fretsAm = [-1, 0, 2];
 var fretsC = [-1, 3, 2, 0, 1, 0];
 var fretsE = [0, 2, 2, 1, 0, 0];
 var fretsG = [3, 2, 0, 0, 0, 3];
-var fretsDm = [-1, -1, 0, 2, 3, 1];
+var fretsDm = [-1, -1, 0, 2, 3, 2];
 
 function pitches(frets) {
   var p = [];
