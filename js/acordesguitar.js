@@ -1,23 +1,14 @@
-var selectedPreset = _tone_0000_SBLive_sf2;
-var AudioContextFunc = window.AudioContext || window.webkitAudioContext;
-var audioContext = new AudioContextFunc();
-//var output = audioContext.destination;
-var player = new WebAudioFontPlayer();
-//var now = 0;
-player.adjustPreset(audioContext, selectedPreset);
-function TOCA(pitches) {
-  var audioBufferSourceNode = player.queueChord(audioContext, audioContext.destination, selectedPreset, audioContext.currentTime + 0, pitches, 1.5, 1)
-}
 
 var C = 0, Cs = 1, D = 2, Ds = 3, E = 4, F = 5, Fs = 6, G = 7, Gs = 8, A = 9, As = 10, B = 11;
 var O = 12;
 var _6th = E + O * 3, _5th = A + O * 3, _4th = D + O * 4, _3rd = G + O * 4, _2nd = B + O * 4, _1st = E + O * 5;
 
-var fretsAm = [-1, 0, 2];
-var fretsC = [-1, 3, 2, 0, 1, 0];
-var fretsE = [0, 2, 2, 1, 0, 0];
-var fretsG = [3, 2, 0, 0, 0, 3];
-var fretsDm = [-1, -1, 0, 2, 3, 2];
+			
+var fretsAm = [-1, 0, 2, 2, 1, 0];
+var fretsC =  [-1, 3, 2, 0, 1, 0];
+var fretsE =  [ 0, 2, 2, 1, 0, 0];
+var fretsG =  [ 3, 2, 0, 0, 0, 3];
+var fretsDm = [-1,-1, 0, 2, 3, 1];
 
 function pitches(frets) {
   var p = [];
@@ -30,14 +21,17 @@ function pitches(frets) {
   return p;
 }
 
-
-
-//var notes = [C, D];
-let pieColors = [0, 30, 60, 90, 120, 150, 180];
-//let osc;
-//let playing = false;
+let pieColors = [[120,50,220], [10,50,220], [120,50,20], [20,50,20], [10,250,25], [12,5,20], [100,0,0]];
 let song;
 let diameter = 300;
+
+var selectedPreset = _tone_0240_SBLive_sf2;
+var AudioContextFunc = window.AudioContext || window.webkitAudioContext;
+var audioContext = new AudioContextFunc();
+//var output = audioContext.destination;
+var player = new WebAudioFontPlayer();
+//var now = 0;
+player.adjustPreset(audioContext, selectedPreset);
 
 
 function setup() {
@@ -54,7 +48,9 @@ function draw() {
   pieChart(diameter);
 }
 
-
+function TOCA(pitches) {
+  var audioBufferSourceNode = player.queueChord(audioContext, audioContext.destination, selectedPreset, audioContext.currentTime + 0, pitches, 1, 1)
+}
 function pieChart(diameter) {
   let lastAngle = HALF_PI;
   for (let i = 0; i < 7; i++) {
@@ -81,8 +77,10 @@ function mousePressed() {
       TOCA(pitches(fretsG));
     } else if (s == 3) {
       TOCA(pitches(fretsDm));
-    } else if (s >= 4) {
+    } else if (s == 4) {
       TOCA(pitches(fretsE));
+    } else if (s == 5) {
+      TOCA(pitches(fretsD));
     }
     //print(playing);
   }

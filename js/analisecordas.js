@@ -21,11 +21,53 @@ var valor16
 var valor17
 var valor18
 var valor19
-var valor20*/
+var valor20
+
+intrumento e notas*/
+/*var sons 
+var piano = document.getElementById("piano")
+var guitarra = document.getElementById("guita")
+var button = document.getElementById("toque")
+button.onClick = function(){
+  if(piano.value =="1" ){
+    piano = _tone_0000_SBLive_sf2
+    sons = piano
+    console.log( piano)
+    return sons
+  }
+  else if(guitarra.value == "2" ){
+    guitarra = _tone_0000_SBLive_sf2
+    sons = guitarra
+    return sons
+  }
+}
+console.log( sons)
+*/
+
+var buttons = document.getElementsByTagName("button");
+
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", message);
+}
+
+function message(som) {
+  var piano = _tone_0000_SBLive_sf2
+  var guitar = _tone_0240_SBLive_sf2
+  var name = this.name;
+  if (name == "piano") {
+    som = piano
+    return som
+    //alert("Piano");
+  } else if (name == "guitar") {
+    som = guitar
+    //alert("Guitarra");
+  }
+}
 
 
 //Para o webaudiofont funcionar//
-var selectedPreset = _tone_0000_SBLive_sf2;
+ //input tilizador
+var selectedPreset = message()
 var AudioContextFunc = window.AudioContext || window.webkitAudioContext;
 var audioContext = new AudioContextFunc();
 //var output = audioContext.destination;
@@ -37,9 +79,9 @@ player.adjustPreset(audioContext, selectedPreset);
 //Preload//
 function preload() {
   // cordas
-  cordassong = loadSound("cordas.wav") // Ficheiro áudio
-  pitchcordas = loadTable("pitchcordas.txt", "csv") // Pitch
-  analisecordas = loadTable("analisecordas.txt", "csv") // Análise Tempo / Cores
+  cordassong = loadSound("/Sounds/cordas.wav") // Ficheiro áudio
+  pitchcordas = loadTable("/Pitch/pitchcordas.txt", "csv") // Pitch
+  analisecordas = loadTable("/Analises/analisecordas.txt", "csv") // Análise Tempo / Cores
   
 }
 
@@ -61,7 +103,7 @@ function setup() {
   notes.push(parseInt(pitchcordas.getString(4,0))+(12*5))
   notes.push(parseInt(pitchcordas.getString(5,0))+(12*5))
   notes.push(parseInt(pitchcordas.getString(6,0))+(12*5))
-  print(notes)
+  //print(notes)
   for (let c = 1; c < analisecordas.getColumnCount(); c++) {
     cor1.push(analisecordas.getString(0,c)*255)
     cor2.push(analisecordas.getString(1,c)*255)
@@ -84,7 +126,6 @@ function setup() {
     if (secs < 10) {
       secs = '0' + String(secs);
     }
-    timer.innerHTML = mins + ':' + secs;
   }, 10);
 
   }
@@ -101,7 +142,7 @@ function setup() {
   }
 
 function draw() {
-  background(255,145,20);
+  background(152,180,212);
   pieChart(diameter);
 }
 

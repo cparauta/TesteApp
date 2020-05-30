@@ -1,0 +1,258 @@
+body {
+    font-family: "Open Sans",sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+}
+ul li:hover a{
+    padding-left: 50px;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+.sidebar .botoes_fundo{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.sidebar .botoes_fundo a{
+    display: block;
+    width: 50px;
+    background: #07204a;
+    height: 50px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 5px;
+    border-top-right-radius: 55px;
+    border-top-left-radius: 55px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05);
+    color: #bdb8d7;
+}
+.sidebar .botoes_fundo a:hover {
+    padding-top: 5px;
+    background-color: rgba(255, 255, 255, 0.24);
+
+}
+#check{
+    display: none
+}
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+}
+label #btn{
+    position: fixed;
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+label #cancel{
+    position: fixed;
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+
+}
+
+.audio{
+    position: fixed;
+    left: 630px;
+    top: 500px;
+    width: 100px;
+    background: #ffffff00;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+h4{
+    color: rgba(0, 0, 0, 0.616);
+    margin: 30px 30px;
+    position: fixed;
+    left: 525px;
+}
+.circle-stack1 {
+    position: fixed;
+    left: 500px;
+    top: 80px
+}
+  
+.fa-circle-thin,
+.points-indicator {
+    position: absolute;
+    top: 5px;
+    left: -1px;
+}
+  
+.fa-circle {
+    font-size: 30px;
+    color: #c0cff6;
+}
+  
+.points-indicator {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+}
+.circle-stack2 {
+    position: fixed;
+    left: 600px;
+    top: 80px
+}
+  
+.fa-circle-thin,
+.points-indicator {
+    position: absolute;
+    top: 5px;
+    left: -1px;
+}
+  
+.fa-circle {
+    font-size: 30px;
+    color: #c0cff6;
+}
+  
+.points-indicator {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+}
+.circle-stack3 {
+    position: fixed;
+    left: 700px;
+    top: 80px
+}
+  
+.fa-circle-thin,
+.points-indicator {
+    position: absolute;
+    top: 5px;
+    left: -1px;
+}
+  
+.fa-circle {
+    font-size: 30px;
+    color: #c0cff6;
+}
+  
+.points-indicator {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+}
+.circle-stack4 {
+    position: fixed;
+    left: 800px;
+    top: 80px
+}
+  
+.fa-circle-thin,
+.points-indicator {
+    position: absolute;
+    top: 5px;
+    left: -1px;
+}
+  
+.fa-circle {
+    font-size: 30px;
+    color: #c0cff6;
+}
+  
+.points-indicator {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar .Instrumentos{
+    position: fixed;
+    top:170px;
+    right:100px;
+}
+.sidebar .Instrumentos a{
+    display: block;
+    width: 100px;
+    background: #5d88d193;
+    height: 5px;
+    line-height: 30px;
+    text-align: center;
+    border-top-right-radius: 55px;
+    border-top-left-radius: 55px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    border-bottom: 20px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgb(225, 225, 225);
+    color: #f8f8f8;
+    margin-bottom: 30px;
+}
+.sidebar .Instrumentos a:hover {
+    background-color: rgba(10, 87, 252, 0.514);
+}

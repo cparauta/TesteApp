@@ -14,8 +14,8 @@ let song;
 let diameter = 300;
 
 function preload() {
-    pitch = loadTable('pitch.txt', 'tsv');
-    tempo = loadTable('analysis.txt', 'tsv');
+    pitch = loadTable('/Pitch/pitchcordas.txt', 'tsv');
+    tempo = loadTable('/Analises/analysis.txt', 'tsv');
 }
 
 
