@@ -5,6 +5,7 @@ let notas4 = [];
 let notas5 = [];
 let notas6 = [];
 let notas7 = [];
+let notas = [[notas1],[notas2],[notas3],[notas4],[notas5], [notas6], [notas7]]
 var cor1 = [], cor2 = [], cor3 = [], cor4 = [], cor5 = [], cor6 = [], cor7 = [], cor8 = [], cor9 = [], cor10 = [], cor11 = [], cor12 = [],cor13 =[],cor14 =[]
 var song;
 var button;
@@ -22,7 +23,7 @@ player.adjustPreset(audioContext, selectedPreset);
 function preload() {
   // guitarra
   guitarsong = loadSound("/Sounds/guitarwithecho.wav") // Ficheiro áudio
-  pitchguitar = loadTable("/Pitch/pitchguitar.txt", "csv") // Pitch
+  pitchguitar2 = loadTable("/Pitch/pitchguitar2.txt", "csv") // Pitch
   analiseguitar = loadTable("/Analises/analiseguitar.txt", "csv") // Análise Tempo / Cores 
 }
 
@@ -31,13 +32,20 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  notas1.push(parseInt(pitchguitar.getString(0,0))+(12*5))
-  notas2.push(parseInt(pitchguitar.getString(1,0))+(12*5))
-  notas3.push(parseInt(pitchguitar.getString(2,0))+(12*5))
-  notas4.push(parseInt(pitchguitar.getString(3,0))+(12*5))
-  notas5.push(parseInt(pitchguitar.getString(4,0))+(12*5))
-  notas6.push(parseInt(pitchguitar.getString(5,0))+(12*5))
-  notas7.push(parseInt(pitchguitar.getString(6,0))+(12*5))
+  notas1.push(parseInt(pitchguitar2.getString(0,0))+(12*5))
+  notas1.push(parseInt(pitchguitar2.getString(0,1))+(12*5))
+  notas2.push(parseInt(pitchguitar2.getString(1,0))+(12*5))
+  notas2.push(parseInt(pitchguitar2.getString(1,1))+(12*5))
+  notas3.push(parseInt(pitchguitar2.getString(2,0))+(12*5))
+  notas3.push(parseInt(pitchguitar2.getString(2,1))+(12*5))
+  notas4.push(parseInt(pitchguitar2.getString(3,0))+(12*5))
+  notas4.push(parseInt(pitchguitar2.getString(3,1))+(12*5))
+  notas5.push(parseInt(pitchguitar2.getString(4,0))+(12*5))
+  notas5.push(parseInt(pitchguitar2.getString(4,1))+(12*5))
+  notas6.push(parseInt(pitchguitar2.getString(5,0))+(12*5))
+  notas6.push(parseInt(pitchguitar2.getString(5,1))+(12*5))
+  notas7.push(parseInt(pitchguitar2.getString(6,0))+(12*5))
+  notas7.push(parseInt(pitchguitar2.getString(6,1))+(12*5))
   for (let c = 1; c < analiseguitar.getColumnCount(); c++) {
     cor1.push(analiseguitar.getString(0,c))
     cor2.push(analiseguitar.getString(1,c))
@@ -99,7 +107,7 @@ function draw() {
 
 // Funcao para o webaudiofont //
 function startWaveTableNow(pitch) {
-  var audioBufferSourceNode = player.queueWaveTable(audioContext, audioContext.destination, selectedPreset, audioContext.currentTime + 0, pitch, 1, 0.3)
+  var audioBufferSourceNode = player.queueChord(audioContext, audioContext.destination, selectedPreset, audioContext.currentTime + 0, pitch, 1, 0.3)
 }
 function pieChart(diameter) {
   let lastAngle = HALF_PI;

@@ -6,6 +6,7 @@ body {
     padding: 0;
     list-style: none;
     text-decoration: none;
+    
 }
 .sidebar {
     position: fixed;
@@ -14,6 +15,9 @@ body {
     height: 100%;
     background: #042331;
     transition: all .5s ease;
+    z-index: 1 
+    
+    
 }
 .sidebar header{
     font-size: 22px;
@@ -21,7 +25,8 @@ body {
     text-align: center;
     line-height: 70px;
     background: #063146;
-    user-select: none;
+    user-select: none; 
+    
 }
 .sidebar ul a{
     display: block;
@@ -34,13 +39,17 @@ body {
     box-sizing: border-box;
     border-top: 1px solid rgba(255,255,255,.1);
     border-bottom: 1px solid black;
+    
+    
 }
 ul li:hover a{
     padding-left: 50px;
     background-color: rgba(255, 255, 255, 0.24);
+    
 }
 .sidebar ul a i{
     margin-right: 16px;
+
 }
 
 .sidebar .botoes_fundo{
@@ -57,7 +66,7 @@ ul li:hover a{
     height: 50px;
     line-height: 30px;
     text-align: center;
-    margin: 0 5px;
+    margin: 0 15px;
     border-top-right-radius: 55px;
     border-top-left-radius: 55px;
     padding: 10px;
@@ -72,12 +81,14 @@ ul li:hover a{
 }
 #check{
     display: none
+  
 }
 label #btn, label #cancel {
     position: absolute;
     cursor: pointer;
     background: #042331;
     border-radius: 3px;
+    
 }
 label #btn{
     position: fixed;
@@ -87,6 +98,7 @@ label #btn{
     color: white;
     padding: 6px 12px;
     transition: all .5s;
+    
 }
 label #cancel{
     position: fixed;
@@ -97,6 +109,7 @@ label #cancel{
     color: #0a5275;
     padding: 4px 9px;
     transition: all .5s ease;
+     
 }
 #check:checked ~ .sidebar{
     left: 0;
@@ -106,16 +119,19 @@ label #cancel{
     left: 250px;
     opacity: 0;
     pointer-events: none;
+
+    
 }
 #check:checked ~ label #cancel{
     left: 195px;
+    
 
 }
 
 .audio{
     position: fixed;
-    left: 630px;
-    top: 500px;
+    left: 720px;
+    top: 560px;
     width: 100px;
     background: #ffffff00;
     height: 40px;
@@ -123,136 +139,62 @@ label #cancel{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+   
 }
 h4{
+    text-align: center;
     color: rgba(0, 0, 0, 0.616);
     margin: 30px 30px;
     position: fixed;
-    left: 525px;
-}
-.circle-stack1 {
-    position: fixed;
-    left: 500px;
-    top: 80px
-}
-  
-.fa-circle-thin,
-.points-indicator {
-    position: absolute;
-    top: 5px;
-    left: -1px;
-}
-  
-.fa-circle {
-    font-size: 30px;
-    color: #c0cff6;
-}
-  
-.points-indicator {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 20px;
-    width: 100%;
-    text-align: center;
-}
-.circle-stack2 {
-    position: fixed;
-    left: 600px;
-    top: 80px
-}
-  
-.fa-circle-thin,
-.points-indicator {
-    position: absolute;
-    top: 5px;
-    left: -1px;
-}
-  
-.fa-circle {
-    font-size: 30px;
-    color: #c0cff6;
-}
-  
-.points-indicator {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 20px;
-    width: 100%;
-    text-align: center;
-}
-.circle-stack3 {
-    position: fixed;
-    left: 700px;
-    top: 80px
-}
-  
-.fa-circle-thin,
-.points-indicator {
-    position: absolute;
-    top: 5px;
-    left: -1px;
-}
-  
-.fa-circle {
-    font-size: 30px;
-    color: #c0cff6;
-}
-  
-.points-indicator {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 20px;
-    width: 100%;
-    text-align: center;
-}
-.circle-stack4 {
-    position: fixed;
-    left: 800px;
-    top: 80px
-}
-  
-.fa-circle-thin,
-.points-indicator {
-    position: absolute;
-    top: 5px;
-    left: -1px;
-}
-  
-.fa-circle {
-    font-size: 30px;
-    color: #c0cff6;
-}
-  
-.points-indicator {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 20px;
-    width: 100%;
-    text-align: center;
+    left: 625px;
+    
 }
 
-.sidebar .Instrumentos{
+
+.circulo {
     position: fixed;
-    top:170px;
-    right:100px;
+    top:80px;
+    left:565px;
 }
-.sidebar .Instrumentos a{
+.sidebar .circulo a button{
+    display: inline-block;
+    background: #2e82b393;
+    width: 5px;
+    height: 5px;
+    line-height: 10px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 20px;
+    color: #030202;
+    margin: 30px;
+}
+#cor {
+    background: #21a72893;
+}
+
+.sidebar .Instrumentos {
+    position: fixed;
+    top:200px;
+    right:150px;
+}
+.sidebar .Instrumentos button{
     display: block;
     width: 100px;
-    background: #5d88d193;
-    height: 5px;
-    line-height: 30px;
-    text-align: center;
+    background: #03183b93;
+    height: 10px;
+    line-height: 25px;
     border-top-right-radius: 55px;
     border-top-left-radius: 55px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 55px;
+    border-bottom-left-radius: 55px;
     padding: 10px;
     border-bottom: 20px solid rgba(0,0,0,0.05);
     border-top: 1px solid rgb(225, 225, 225);
     color: #f8f8f8;
     margin-bottom: 30px;
 }
-.sidebar .Instrumentos a:hover {
+.Instrumentos button:hover {
     background-color: rgba(10, 87, 252, 0.514);
 }

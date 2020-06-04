@@ -23,7 +23,7 @@ player.adjustPreset(audioContext, selectedPreset);
 function preload() {
     // Harpa
     cravosong = loadSound("/Sounds/harpsichord.wav")
-    pitchcravo = loadTable("/Pitch/pitchcravo.txt", "csv")
+    pitchcravo3 = loadTable("/Pitch/pitchcravo3.txt", "csv")
     analisecravo = loadTable("/Analises/analisecravo.txt", "csv")
     
   }
@@ -34,13 +34,33 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  notas1.push(parseInt(pitchcravo.getString(0,0))+(12*5))
-  notas2.push(parseInt(pitchcravo.getString(1,0))+(12*5))
-  notas3.push(parseInt(pitchcravo.getString(2,0))+(12*5))
-  notas4.push(parseInt(pitchcravo.getString(3,0))+(12*5))
-  notas5.push(parseInt(pitchcravo.getString(4,0))+(12*5))
-  notas6.push(parseInt(pitchcravo.getString(5,0))+(12*5))
-  notas7.push(parseInt(pitchcravo.getString(6,0))+(12*5))
+  notas1.push(parseInt(pitchcravo3.getString(0,0))+(12*5))
+  notas1.push(parseInt(pitchcravo3.getString(0,1))+(12*5))
+  notas1.push(parseInt(pitchcravo3.getString(0,2))+(12*5))
+
+  notas2.push(parseInt(pitchcravo3.getString(1,0))+(12*5))
+  notas2.push(parseInt(pitchcravo3.getString(1,1))+(12*5))
+  notas2.push(parseInt(pitchcravo3.getString(1,2))+(12*5))
+
+  notas3.push(parseInt(pitchcravo3.getString(2,0))+(12*5))
+  notas3.push(parseInt(pitchcravo3.getString(2,1))+(12*5))
+  notas3.push(parseInt(pitchcravo3.getString(2,2))+(12*5))
+
+  notas4.push(parseInt(pitchcravo3.getString(3,0))+(12*5))
+  notas4.push(parseInt(pitchcravo3.getString(3,1))+(12*5))
+  notas4.push(parseInt(pitchcravo3.getString(3,2))+(12*5))
+
+  notas5.push(parseInt(pitchcravo3.getString(4,0))+(12*5))
+  notas5.push(parseInt(pitchcravo3.getString(4,1))+(12*5))
+  notas5.push(parseInt(pitchcravo3.getString(4,2))+(12*5))
+
+  notas6.push(parseInt(pitchcravo3.getString(5,0))+(12*5))
+  notas6.push(parseInt(pitchcravo3.getString(5,1))+(12*5))
+  notas6.push(parseInt(pitchcravo3.getString(5,2))+(12*5))
+
+  notas7.push(parseInt(pitchcravo3.getString(6,0))+(12*5))
+  notas7.push(parseInt(pitchcravo3.getString(6,1))+(12*5))
+  notas7.push(parseInt(pitchcravo3.getString(6,2))+(12*5))
   for (let c = 1; c < analisecravo.getColumnCount(); c++) {
     cor1.push(analisecravo.getString(0,c))
     cor2.push(analisecravo.getString(1,c))
@@ -66,8 +86,9 @@ function setup() {
     cor22.push(analisecravo.getString(21,c))
     cor23.push(analisecravo.getString(22,c))
     cor24.push(analisecravo.getString(23,c))
-  }
-  document.getElementById("audio").volume = 0.5; 
+}
+    document.getElementById("audio").volume = 0.5; 
+  
 
 }
   
@@ -114,7 +135,7 @@ function draw() {
 
 // Funcao para o webaudiofont //
 function startWaveTableNow(pitch) {
-  var audioBufferSourceNode = player.queueWaveTable(audioContext, audioContext.destination, selectedPreset, audioContext.currentTime + 0, pitch, 1, 0.3)
+  var audioBufferSourceNode = player.queueChord(audioContext, audioContext.destination, selectedPreset, audioContext.currentTime + 0, pitch, 1, 0.3)
 }
 function pieChart(diameter) {
   let lastAngle = HALF_PI;
