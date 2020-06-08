@@ -1,12 +1,14 @@
-body {
-    font-family: "Open Sans",sans-serif;
-}
+
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     
+}
+body {
+    width:100%;
+    font-family: "Open Sans",sans-serif;
 }
 .sidebar {
     position: fixed;
@@ -182,7 +184,7 @@ h4{
 .sidebar .Instrumentos button{
     display: block;
     width: 100px;
-    background: #03183b93;
+    background: #1950ad93;
     height: 10px;
     line-height: 25px;
     border-top-right-radius: 55px;
@@ -191,10 +193,61 @@ h4{
     border-bottom-left-radius: 55px;
     padding: 10px;
     border-bottom: 20px solid rgba(0,0,0,0.05);
-    border-top: 1px solid rgb(225, 225, 225);
+    border-top: 1px solid rgba(225, 225, 225, 0);
     color: #f8f8f8;
     margin-bottom: 30px;
+    
 }
 .Instrumentos button:hover {
     background-color: rgba(10, 87, 252, 0.514);
 }
+.Instrumentos button:focus {
+    background-color: rgb(153, 111, 21);
+}
+@media screen and (max-width:800px) {
+    .sidebar{
+      display: block !important;
+    }
+  
+    .navigation-menu{
+      position: fixed;
+      width: 100%;
+      max-width: 400px;
+      background: #172b4d;
+      top: 90px;
+      right: 0;
+      display: none;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+  
+    .navigation-menu::before{
+      content: "";
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #172b4d;
+      position: absolute;
+      top: -10px;
+      right: 10px;
+    }
+  
+    .navigation-menu a{
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .navigation-menu.active{
+      display: block;
+    }
+  
+    .audio{
+      position: relative;
+      top: 500px;
+    }
+    .nomes p{
+      display: inline-block;
+      padding: 0 20px;
+    }
+  
+  }

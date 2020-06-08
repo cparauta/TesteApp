@@ -3,9 +3,14 @@
   padding: 0;
   text-decoration: none;
   font-family: "Open Sans",sans-serif;
-}
 
+}
+body{
+  width:100%;
+  background: #7d849a81 ;
+}
 header{
+  position: relative;
   height: 90px;
   background: #3f5066;
 }
@@ -18,14 +23,18 @@ header{
 
 .logo{
   float: left;
-  padding: 20px 0;
+  position: absolute;
+  left: -100px;
+  padding: 5px 0;
 }
 
 .logo img{
-  height: 50px;
+  width: 500px;
+  height: 80px;
 }
 
 .navigation-menu{
+
   float: right;
   display: flex;
   align-items: center;
@@ -53,9 +62,6 @@ header{
   font-size: 16px;
 }
 
-.home{
-  color: #ff6b6b;
-}
 
 .about{
   color: #0abde3;
@@ -66,21 +72,12 @@ header{
 }
 
 
-.contact{
-  color: #1dd1a1;
+.fa-question-circle{
+  color: #eff1f1;
 }
 
-/*.audios {
-  font-family: "Open Sans",sans-serif;
-  list-style: none;
-  display: block;
-  min-height: 290px;
-  padding: 100;
-  position: absolute;
-  background-color: #172b4d ;
-}*/
-
 .menu-toggle-btn{
+  position: relative;
   float: right;
   height: 90px;
   line-height: 90px !important;
@@ -90,13 +87,148 @@ header{
   cursor: pointer;
 }
 
-.audio{
+
+h1{
+  position: relative;
+  text-align: left;
+  font-size: 25px;
+  text-decoration: underline;
+  /*text-indent: 100px; paragrafo*/
+  padding-left: 38px; 
+  padding-top: 5px ;
+}
+#um{
+  position: relative;
+  padding-top: 20px;
+  padding-left: 18px;
+  padding-right: 38px;
+  text-indent: 45px;
+  line-height: 1.4;
+  text-align: justify;
+
+}
+#dois{
+  position: relative;
+  padding-top: 10px;
+  padding-left: 18px;
+  padding-right: 38px;
+  text-indent: 45px;
+  line-height: 1.4;
+  text-align: justify;
+
+}
+#tres {
+  position: relative;
+  padding-top: 10px;
+  padding-left: 18px;
+  padding-right: 38px;
+  text-indent: 45px;
+  line-height: 1.4;
+  text-align: justify;
+}
+#tresli{
+  list-style-position: inside;
+  position: relative;
+  padding-top: 5px;
+  padding-left: 18px;
+  padding-right: 38px;
+  text-indent: 45px;
+  line-height: 1.4;
+  text-align: justify;
+}
+#quatro {
+  position: relative;
+  padding-top: 15px;
+  padding-left: 18px;
+  padding-right: 38px;
+  text-indent: 45px;
+  line-height: 1.4;
+  text-align: justify;
+}
+#quatrool{
+  list-style-position: inside;
+  position: relative;
+  padding-top: 5px;
+  padding-left: 18px;
+  padding-right: 38px;
+  text-indent: 45px;
+  line-height: 1.4;
+  text-align: justify;
+}
+#cinco{
+  position: relative;
+  padding-top: 10px;
+  padding-left: 18px;
+  padding-right: 38px;
+  text-indent: 45px;
+  line-height: 1.4;
+  text-align: justify;
+}
+#seis{
+  position: relative;
+  padding-top: 10px;
+  padding-left: 18px;
+  padding-right: 38px;
+  text-indent: 45px;
+  line-height: 1.4;
+  text-align: justify;  
+}
+.oi{
   position: absolute;
-  left: 170px;
-  top: 170px;
+  left: 250px;
+  top: 580px;
+
+}
+.oi :hover{
+  color:rgba(40, 92, 161, 0.486);
+  text-decoration: none;
 }
 
+.oi a{
+  display: inline-block;
+  padding: 0 50px;
+  color: rgb(40, 93, 161)
+}
 
+.oi a:visited {
+  color: rgba(45, 66, 94, 0.596);
+}
+
+.oi a:active {
+  color: rgb(99, 48, 47);
+}
+
+.nomes{
+  position: absolute;
+  left: 520px;
+  top: 600px;
+}
+.nomes p{
+  display: inline-block;
+  padding: 0 60px;
+}
+
+.imagem{
+  text-align: center;
+}
+#imagem1:hover{
+  transform: scale(2);
+}
+#imagem2:hover{
+  transform: scale(2);
+}
+#imagem3:hover{
+  transform: scale(2);
+}
+#imagem4:hover{
+  transform: scale(2);
+}
+#imagem5:hover{
+  transform: scale(2);
+}
+#imagem6:hover{
+  transform: scale(2);
+}
 @media screen and (max-width:800px) {
   .menu-toggle-btn{
     display: block !important;
@@ -112,6 +244,7 @@ header{
     display: none;
     padding: 20px 40px;
     box-sizing: border-box;
+    z-index: 1;
   }
 
   .navigation-menu::before{
@@ -131,6 +264,40 @@ header{
 
   .navigation-menu.active{
     display: block;
+  }
+  .oi{
+    position: absolute;
+    left: 250px;
+    top: 580px;
+  
+  }
+  .oi :hover{
+    color:rgba(40, 92, 161, 0.486);
+    text-decoration: none;
+  }
+  
+  .oi a{
+    display: inline-block;
+    padding: 0 50px;
+    color: rgb(40, 93, 161)
+  }
+  
+  .oi a:visited {
+    color: rgba(45, 66, 94, 0.596);
+  }
+  
+  .oi a:active {
+    color: rgb(99, 48, 47);
+  }
+  
+  .nomes{
+    position: absolute;
+    left: 520px;
+    top: 600px;
+  }
+  .nomes p{
+    display: inline-block;
+    padding: 0 60px;
   }
 
 }

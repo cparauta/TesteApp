@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Sobre </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+  </head>
+  
+  <body>
+    <section>
+    <header>
+      <div class="inner-width">
+        <a class="logo"><img src="/logowd.png" alt="logo"></a>
+        <i class="menu-toggle-btn fas fa-bars"></i>
+        <nav class="navigation-menu">     
+          <a href="/index.html"><i class="fab fa-buffer works"></i> WebD'accord</a>
+          <a><i class="fas fa-align-left about"></i> Sobre</a>
+          <a href="/html/ajuda.html"><i class="fas fa-question-circle"></i> Ajuda</a>
+        </nav>
+      </div>
+    </header>
+    <div>
+      <h1>Sobre este projeto</h1>
+      <p id="um"> Este projeto nasce no âmbito do projeto de dissertação realizado no Mestrado em Multimédia na especialização de Música Interativa e Design de Som.</p>
+      
+      <p id="dois">Esta aplicação Web tem por base a aplicação D’accord que guia o utilizador 
+        em potenciais acompanhamentos (melódico e harmónico) de uma faixa musical, 
+        em informação MIDI e sintetizada em tempo real, ou a partir de sinais de áudio.</p>
+         
+      <p id="tres">O objetivo principal desta dissertação é:
+        <ol id="tresli">
+        <li><b>Expandir o leque de ferramentas pedagógicas para o ensino de música no 1ºciclo.</b></li></ol></p>
+      
+      <p id="quatro">E para cumprir este desiderato temos os seguintes fases/objetivos:
+        <ol id="quatrool">
+          <li>Expansão da aplicação D’accord para um ambiente web proporcionando a facilidade de acesso em múltiplos terminais;</li>
+          <li>Perceber o contributo ao nível do desenvolvimento de uma escuta informada no contexto tonal de conceitos sobre melodia, 
+        harmonia e instrumentação, tendo como utilizadores alvo alunos do 1º ciclo;</li>
+          <li>Definir estratégias pedagógicas conducentes à aplicação da ferramenta em sala de aula e o desenho de atividades que 
+        respondam aos requisitos das mesmas.</li></ol></p>
+        
+      <p id="cinco">Face à atual situação de pandemia da Covid-19 vivida por todos nós, as fases 2 e 3 não puderam ser avaliadas da forma 
+        inicialmente pensada que seria com um grupo de alunos do 4º ano. Estas avaliações da aplicação estavam inseridas nas 
+        Oficinas de Música numa parceria com a Câmara Municipal de Matosinhos.</p>
+        
+      <p id="seis">De modo a ultrapassar estes percalços, foi realizada a expansão da aplicação D’accord para um ambiente web onde é possível 
+        acompanhar musicalmente um áudio previamente analisado, podendo ser acedido em diferentes dispositivos, plataformas, 
+        lugares e em diferentes momentos, proporcionando uma alargada ubiquidade e possibilidade de aprendizagem diferenciada.
+        A fase de avaliação foi realizada de forma heurística de modo a avaliar a interface e a sua utilização.</p>
+        
+      <i class="oi">
+        <a href="https://sites.google.com/site/tonalintervalspace/d-accord">Link do projeto D'accord</a>
+        <a href="mailto:gba@fe.up.pt">Contacto Orientador</a>
+        <a href="mailto:claudio_parauta@hotmail.com">Contacto Orientando</a>
+      <i class="nomes">
+        <p>Gilberto Bernardes</p>
+        <p>Cláudio Parauta</p>
+      </div>
+    </section>
+     
+
+    <script type="text/javascript">
+      $(".menu-toggle-btn").click(function(){
+        $(this).toggleClass("fa-times");
+        $(".navigation-menu").toggleClass("active");
+      });
+    </script>    
+  </body>
+
+</html>

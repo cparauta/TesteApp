@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+    <head>
+        <title> Ajuda </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="inner-width">
+                <a class="logo"><img src="/logowd.png" alt="logo"></a>
+                <i class="menu-toggle-btn fas fa-bars"></i>
+                <nav class="navigation-menu">
+                    <a href="/index.html"><i class="fab fa-buffer works"></i> WebD'accord</a>
+                    <a href="/html/sobre.html"><i class="fas fa-align-left about"></i> Sobre</a>
+                    <a><i class="fas fa-question-circle"></i> Ajuda</a>
+                </nav>
+            </div>
+        </header>
+        <figure>
+            <div class="imagem" >
+                <img id="imagem1" src="/img1.png" alt="Passo1" width="25%">
+                <figcaption>Fig.1 - Acede a este menu</figcaption>
+                <img id="imagem2" src="/img2.png" alt="Passo2" width="25%">
+                <figcaption>Fig.2 - Escolhe aqui a música</figcaption>
+                <img id="imagem1" src="/img3.png" alt="Passo3" width="25%">
+                <figcaption>Fig.3 - Escolhe o número de notas </figcaption>
+                <img id="imagem2" src="/img4.png" alt="Passo4" width="25%">
+                <figcaption>Fig.4 - Escolhe o teu instrumento</figcaption>
+                <img id="imagem1" src="/img5.png" alt="Passo5" width="25%">
+                <figcaption>Fig.5 - Toca aqui para reproduzir a música</figcaption>
+                <img id="imagem2" src="/img6.png" alt="Passo6" width="25%">
+                <figcaption>Fig.6 - Aqui irá será representada em cores<br>escuras a melhor opção possível para tocares!</figcaption>
+            </div>
+            
+        </figure>
+
+        <script type="text/javascript">
+        $(".menu-toggle-btn").click(function(){
+            $(this).toggleClass("fa-times");
+            $(".navigation-menu").toggleClass("active");
+            });
+        </script>
+    </body>
+</html>
