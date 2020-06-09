@@ -145,16 +145,6 @@ h1{
   line-height: 1.4;
   text-align: justify;
 }
-#quatrool{
-  list-style-position: inside;
-  position: relative;
-  padding-top: 5px;
-  padding-left: 18px;
-  padding-right: 38px;
-  text-indent: 45px;
-  line-height: 1.4;
-  text-align: justify;
-}
 #cinco{
   position: relative;
   padding-top: 10px;
@@ -164,7 +154,14 @@ h1{
   line-height: 1.4;
   text-align: justify;
 }
-#seis{
+
+#graus{
+  position: relative;
+  margin-top: 30px;
+  left: 350px;
+  width: 40%;
+}
+/*#seis{
   position: relative;
   padding-top: 10px;
   padding-left: 18px;
@@ -172,40 +169,40 @@ h1{
   text-indent: 45px;
   line-height: 1.4;
   text-align: justify;  
-}
-.oi{
-  position: absolute;
-  left: 250px;
-  top: 580px;
+}*/
+.links{
+  position: relative;
+  left: -250px;
+  top: 100px;
 
 }
-.oi :hover{
+.links a:hover{
   color:rgba(40, 92, 161, 0.486);
-  text-decoration: none;
 }
 
-.oi a{
+.links a{
   display: inline-block;
   padding: 0 50px;
   color: rgb(40, 93, 161)
 }
 
-.oi a:visited {
+.links a:visited {
   color: rgba(45, 66, 94, 0.596);
 }
 
-.oi a:active {
+.links a:active {
   color: rgb(99, 48, 47);
 }
 
 .nomes{
-  position: absolute;
-  left: 520px;
-  top: 600px;
+  position: relative;
+  left: 760px;
+  top: 5px;
 }
 .nomes p{
   display: inline-block;
-  padding: 0 60px;
+  padding: 0 62px;
+  padding-bottom: 30px;
 }
 
 .imagem{
