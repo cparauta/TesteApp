@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Música 1 </title>
+    <script src="/js/p5.js"></script>
+    <script src="/js/p5.sound.min.js"></script>
+    <script src='https://surikov.github.io/webaudiofont/npm/dist/WebAudioFontPlayer.js'></script>
+    <script src='https://surikov.github.io/webaudiofontdata/sound/0000_SBLive_sf2.js'></script> <!--Piano-->
+    <script src='https://surikov.github.io/webaudiofontdata/sound/0240_SBLive_sf2.js'></script> <!--Guitarra-->
+    <script src='https://surikov.github.io/webaudiofontdata/sound/0400_SBLive_sf2.js'></script> <!--Violino-->
+    <script src='https://surikov.github.io/webaudiofontdata/sound/0560_SBLive_sf2.js'></script> <!--Trompete-->
+    <script src='https://surikov.github.io/webaudiofontdata/sound/0120_SBLive_sf2.js'></script> <!--Marimba-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/analise.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+</head>
+
+<body>
+    <h4>Escolhe aqui o número de notas</h4>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Músicas</header>
+        <ul>
+            <li><a href="/index.html"><i class="far fa-file-audio"></i>Música 1</a></li> 
+            <li><a href="/html/analiseguitar.html"><i class="far fa-file-audio"></i>Música 2</a></li>
+            <li><a href="/html/analisecravo1.html"><i class="far fa-file-audio"></i>Música 3</a></li>            
+        </ul>
+        <div class="botoes_fundo">
+            <a href="/html/sobre.html"><i class="fas fa-align-left about" ></i> Sobre </a></li>
+            <a href="/html/ajuda.html"><i class="fas fa-question-circle"></i> Ajuda </a></li>
+        </div>
+
+
+        <div class="circulo">
+            <a>
+            <button id="cor">1</button> </a>
+            <a href="/html/analisecordas2.html">
+            <button>2</button></a>
+            <a href="/html/analisecordas3.html">
+            <button>3</button></a>
+            <a href="/html/analisecordas4.html">
+            <button>4</button></a>
+        </div>
+
+
+        <div class="Instrumentos" >
+            <button class="fas fa-play" name="piano"> Piano </button>
+            <button class="fas fa-play" name="guitarra"> Guitarra </button>
+            <button class="fas fa-play" name="violino"> Violino </button>
+            <button class="fas fa-play" name="trompete"> Trompete </button>
+            <button class="fas fa-play" name="marimba"> Marimba </button>
+ 
+            
+
+        </div>
+            <audio class= "audio" id='audio' src="/Sounds/cordas.wav" controls controlslist="nodownload"></audio> 
+            <script src="/js/analisecordas.js"></script>
+        </body>
+        </html>
